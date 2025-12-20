@@ -1,18 +1,19 @@
 "use client";
-import { useEffect } from "react";
-import Image from "next/image";
-import { ImageKitFile } from "../types/imagekit";
 
-interface ModalProps {
-  item: ImageKitFile;
-  onClose: () => void;
-}
+import { useRouter } from "next/navigation";
+import { useCallback, useEffect } from "react";
 
-export default function Modal({ item, onClose }: ModalProps) {
+const Modal = ({ children }: { children: React.ReactNode }) => {
+  const router = useRouter();
+
+  const onHide = useCallback(() => {
+    router.back();
+  }, [router]);
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        onClose();
+        onHide();
       }
     };
     document.addEventListener("keydown", handleEscape);
@@ -22,15 +23,15 @@ export default function Modal({ item, onClose }: ModalProps) {
       document.removeEventListener("keydown", handleEscape);
       document.body.style.overflow = "unset";
     };
-  }, [onClose]);
+  }, [onHide]);
 
   return (
     <div
       className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4 animate-fade-in-up"
-      onClick={onClose}
+      // onClick={onHide}
     >
       <button
-        onClick={onClose}
+        onClick={onHide}
         className="absolute top-4 right-4 md:top-8 md:right-8 text-white hover:text-gold transition-colors duration-200 z-10 bg-black/50 rounded-full p-2 hover:bg-black/70"
         aria-label="Close modal"
       >
@@ -50,29 +51,13 @@ export default function Modal({ item, onClose }: ModalProps) {
         className="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center"
         onClick={(e) => e.stopPropagation()}
       >
-        {item.fileType === "image" ? (
-          <div className="relative w-full h-full flex items-center justify-center">
-            <Image
-              src={item.url}
-              alt="Memory"
-              width={1200}
-              height={800}
-              className="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-lg"
-              quality={95}
-            />
-          </div>
-        ) : (
-          <video
-            src={item.url}
-            controls
-            autoPlay
-            className="max-w-full max-h-[90vh] w-auto h-auto rounded-lg"
-          />
-        )}
+        {children}
       </div>
       <p className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white/70 text-sm">
         Press ESC to close
       </p>
     </div>
   );
-}
+};
+
+export default Modal;

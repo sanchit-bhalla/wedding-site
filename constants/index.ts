@@ -1,5 +1,19 @@
 import { Event } from "../types";
 
+export const imageKitEndpoint =
+  process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT || "";
+export const IMAGEKIT_PUBLIC_KEY =
+  process.env.NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY || "";
+export const APP_TITLE =
+  process.env.NEXT_PUBLIC_APP_TITLE || "Anuj & Mehak - Wedding Memories";
+export const APP_DESCRIPTION =
+  process.env.NEXT_PUBLIC_APP_DESCRIPTION ||
+  "Lovely punjabi couple Anuj & Mehak wedding memories.";
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+export const CREATOR_TWITTER =
+  process.env.NEXT_PUBLIC_CREATOR_TWITTER ?? "@sanchitbhalla91";
+
 export const events: Event[] = [
   {
     slug: "bangles-ceremony",

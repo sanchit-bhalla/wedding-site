@@ -9,7 +9,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   return {
-    title: `${slug} | Anuj & Mehak's Wedding`,
+    title: `${slug}`,
     description: `Memories from the ${slug} event of Anuj & Mehak's wedding.`,
   };
 }
@@ -28,7 +28,6 @@ const eventNames: Record<string, string> = {
 };
 
 async function getImagesFromFolder(slug: string): Promise<ImageKitFile[]> {
-  await new Promise((resolve) => setTimeout(resolve, 5000)); // Simulate network delay
   const PRIVATE_KEY = process.env.IMAGEKIT_PRIVATE_KEY;
   const FOLDER_PATH = `wedding-album/${slug}`;
   const API_URL = "https://api.imagekit.io/v1/files";
@@ -75,7 +74,7 @@ export default async function EventPage({ params }: EventPageProps) {
   const eventName = eventNames[slug] || slug;
 
   const files = await getImagesFromFolder(slug);
-  // console.log(files);
+  // console.log(files[0]);
 
   return (
     <div className="max-w-7xl mx-auto pb-8 md:pb-12 px-4">
