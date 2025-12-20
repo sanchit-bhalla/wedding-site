@@ -15,7 +15,7 @@ export default function HeroSection() {
         className="object-cover"
         priority
       />
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-20 px-4 md:mt-[40vh]">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-20 px-4 mt-[40vh]">
         <div
           className={`transition-all duration-1000 opacity-100 translate-y-0"
           }`}
