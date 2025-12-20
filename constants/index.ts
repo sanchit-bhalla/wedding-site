@@ -45,7 +45,7 @@ export const events: Event[] = [
     name: "Shagun and Reception",
     venue: "Best Western, Ranjit Avenue, Amritsar",
     date: "03 Dec 2025",
-    image: "/images/hero2.jpg",
+    image: "/images/hero3.jpg",
     bgcolor: "#fce7e7",
   },
   {
@@ -61,7 +61,7 @@ export const events: Event[] = [
     name: "Wedding",
     venue: "B.R. Resort, Wagha Border Road, Amritsar",
     date: "04 Dec 2025, 08:00 PM onwards",
-    image: "/images/hero.jpg",
+    image: "/images/wedding.jpg",
     bgcolor: "#fce7e7",
   },
 ];
