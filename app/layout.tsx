@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: APP_TITLE,
     images: [
       {
-        url: `/images/hero.jpg`,
+        url: `${SITE_URL}/images/hero.jpg`,
         width: 1200,
         height: 630,
         alt: "Anuj and Mehak pic",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${APP_TITLE}`,
     description: APP_DESCRIPTION,
-    images: [`/images/hero.jpg`],
+    images: [`${SITE_URL}/images/hero.jpg`],
     creator: CREATOR_TWITTER,
   },
 };

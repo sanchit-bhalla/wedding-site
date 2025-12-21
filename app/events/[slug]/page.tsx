@@ -1,4 +1,5 @@
 import MasonryGallery from "@/components/MasonryGallery";
+import VideoMemory from "@/components/VideoMemory";
 import { ImageKitFile } from "@/types/imagekit";
 import { Metadata } from "next";
 
@@ -87,6 +88,7 @@ export default async function EventPage({ params }: EventPageProps) {
           Beautiful memories from our special day
         </p>
       </div>
+      <VideoMemory slug={slug} />
       <MasonryGallery media={files} />
     </div>
   );

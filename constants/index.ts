@@ -14,6 +14,15 @@ export const SITE_URL =
 export const CREATOR_TWITTER =
   process.env.NEXT_PUBLIC_CREATOR_TWITTER ?? "@sanchitbhalla91";
 
+export const videoIdMap: Record<string, string> = {
+  // "bangles-ceremony": "FzhGJgBT7mo",
+  "pre-wedding-shoot": "cfdNyHt04RE",
+  mehandi: "FzhGJgBT7mo",
+  // "sagan-and-reception": "FzhGJgBT7mo",
+  "haldi-and-saint": "FzhGJgBT7mo",
+  // wedding: "FzhGJgBT7mo",
+};
+
 export const events: Event[] = [
   {
     slug: "bangles-ceremony",
