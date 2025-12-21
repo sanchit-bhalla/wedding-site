@@ -17,7 +17,7 @@ export const CREATOR_TWITTER =
 export const videoIdMap: Record<string, string> = {
   // "bangles-ceremony": "FzhGJgBT7mo",
   "pre-wedding-shoot": "cfdNyHt04RE",
-  mehandi: "FzhGJgBT7mo",
+  //mehandi: "FzhGJgBT7m",
   // "sagan-and-reception": "FzhGJgBT7mo",
   "haldi-and-saint": "FzhGJgBT7mo",
   // wedding: "FzhGJgBT7mo",
