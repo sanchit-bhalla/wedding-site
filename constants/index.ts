@@ -20,7 +20,7 @@ export const videoIdMap: Record<string, string> = {
   //mehandi: "FzhGJgBT7m",
   // "sagan-and-reception": "FzhGJgBT7mo",
   "haldi-and-saint": "FzhGJgBT7mo",
-  // wedding: "FzhGJgBT7mo",
+  wedding: "FkCnSZPWldI",
 };
 
 export const events: Event[] = [
