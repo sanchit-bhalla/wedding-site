@@ -18,7 +18,7 @@ export const videoIdMap: Record<string, string> = {
   // "bangles-ceremony": "FzhGJgBT7mo",
   "pre-wedding-shoot": "cfdNyHt04RE",
   //mehandi: "FzhGJgBT7m",
-  // "sagan-and-reception": "FzhGJgBT7mo",
+  "sagan-and-reception": "Gc6SG39v9XQ",
   "haldi-and-saint": "FzhGJgBT7mo",
   wedding: "FkCnSZPWldI",
 };
